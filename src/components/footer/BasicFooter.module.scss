@@ -1,0 +1,8 @@
+@use '@/styles/variables' as v;
+
+.footer_container {
+  height: v.$footer_height;
+  grid-row: 3 / 4;
+  grid-column: 1 / 4;
+  padding-bottom: v.$containerPadding;
+}
