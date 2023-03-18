@@ -1,13 +1,13 @@
-import { ReactNode } from 'react';
-import styles from './BasicLayout.module.scss';
-import { BasicFooter } from '@/components/footer/BasicFooter';
-import { BasicHeader } from '@/components/header/BasicHeader';
+import { ReactNode } from 'react'
+import styles from './BasicLayout.module.scss'
+import { BasicFooter } from '@/components/footer/BasicFooter'
+import { BasicHeader } from '@/components/header/BasicHeader'
 
-export interface BasicLayoutProps{
+export interface BasicLayoutProps {
   header: {
-    title: string;
-  },
-  children: ReactNode;
+    title: string
+  }
+  children: ReactNode
 }
 export const BasicLayout = (props: BasicLayoutProps) => {
   return (
@@ -16,5 +16,5 @@ export const BasicLayout = (props: BasicLayoutProps) => {
       {props.children}
       <BasicFooter />
     </div>
-  );
-};
+  )
+}

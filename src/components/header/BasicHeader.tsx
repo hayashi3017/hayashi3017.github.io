@@ -1,7 +1,7 @@
-import styles from './BasicHeader.module.scss';
+import styles from './BasicHeader.module.scss'
 
 export interface HeaderProps {
-  title: string;
+  title: string
 }
 
 export const BasicHeader = (props: HeaderProps) => {
@@ -10,5 +10,5 @@ export const BasicHeader = (props: HeaderProps) => {
       <span className={styles.logo}>ロゴ</span>
       <span className={styles.title}>{props.title}</span>
     </div>
-  );
-};
+  )
+}

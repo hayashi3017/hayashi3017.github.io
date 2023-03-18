@@ -1,4 +1,4 @@
-import styles from './BasicFooter.module.scss';
+import styles from './BasicFooter.module.scss'
 
 export const BasicFooter = () => {
   return (
@@ -10,5 +10,5 @@ export const BasicFooter = () => {
         <li>copy right</li>
       </ul>
     </div>
-  );
-};
+  )
+}
