@@ -1,5 +1,5 @@
-import styles from './BasicLayout.module.scss';
 import { ReactNode } from 'react';
+import styles from './BasicLayout.module.scss';
 import { BasicFooter } from '@/components/footer/BasicFooter';
 import { BasicHeader } from '@/components/header/BasicHeader';
 

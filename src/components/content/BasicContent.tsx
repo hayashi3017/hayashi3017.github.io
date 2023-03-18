@@ -1,5 +1,5 @@
-import styles from './BasicContent.module.scss';
 import { ReactNode } from 'react';
+import styles from './BasicContent.module.scss';
 
 export interface onlyChildProps {
   children: ReactNode;
