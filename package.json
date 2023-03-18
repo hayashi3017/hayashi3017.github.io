@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "yarn lint --fix",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@types/node": "18.15.3",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.7.0",
+    "husky": "^8.0.3",
     "prettier": "^2.8.4",
     "sass": "^1.59.2"
   }
