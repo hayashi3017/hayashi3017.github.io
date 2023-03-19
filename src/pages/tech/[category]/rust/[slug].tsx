@@ -1,4 +1,5 @@
 import fs from 'fs'
+import path from 'path'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 import { Inter } from 'next/font/google'
@@ -10,11 +11,14 @@ import { File } from '@/utils/File'
 
 const inter = Inter({ subsets: ['latin'] })
 
+// TODO: 各ファイルで定義している各階層の/postsへの絶対パスを動的に取得したい.
+// TODO: .next/serverというディレクトリ構成に依存しているので注意.
+const POSTS_DIR = __dirname.replace('.next/server', 'src') + '/posts'
+
 type ArticleProps = InferGetStaticPropsType<typeof getStaticProps>
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // TODO: as不要にする.
-  const fileFullPaths = File.getPostsFileFullPath() as string[]
+  const fileFullPaths = File.listFileFullPaths(POSTS_DIR)
 
   const paths = fileFullPaths.map((fileFullPath) => {
     const fileContents = fs.readFileSync(fileFullPath, 'utf-8')
@@ -36,8 +40,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
-  // TODO: as不要にする.
-  const fullPath = File.getPostsFileFullPath(`${params!.slug}.md`) as string
+  const fullPath = path.join(POSTS_DIR, `${params!.slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf-8')
   const matterResult = matter(fileContents)
 

@@ -19,23 +19,6 @@ const listFileFullPaths = (dir: string): string[] => {
   return fileList
 }
 
-/**
- * マークダウンファイルの絶対パスを取得する.
- * ファイル名を指定しない場合は同階層の/posts配下の全ファイルを返す.
- * @param slug ファイル名.
- * @returns 
- */
-const getPostsFileFullPath = (slug: string = '') => {
-  // .next/serverという実行環境のディレクトリ構造文字列に依存しているため注意.
-  const POSTS_DIR = __dirname.replace('.next/server', 'src') + '/posts'
-
-  if (slug.length) {
-    return path.join(POSTS_DIR, slug)
-  }
-  return listFileFullPaths(POSTS_DIR)
-}
-
 export const File = {
   listFileFullPaths,
-  getPostsFileFullPath,
 }
