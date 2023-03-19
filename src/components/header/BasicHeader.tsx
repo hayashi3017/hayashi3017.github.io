@@ -7,7 +7,7 @@ export interface HeaderProps {
 export const BasicHeader = (props: HeaderProps) => {
   return (
     <div className={styles.header_container}>
-      <span className={styles.logo}>ロゴ</span>
+      <i className={styles.logo}><img src='/next.svg' alt='tag'></img></i>
       <span className={styles.title}>{props.title}</span>
     </div>
   )

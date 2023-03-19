@@ -58,7 +58,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 const Article = ({ content, data }: ArticleProps) => {
   return (
     <>
-      <BasicLayout header={{ title: 'test' }}>
+      <BasicLayout header={{ title: 'Tech Article' }}>
         <BasicContent>
           <div>
             <h1>{data.category}</h1>

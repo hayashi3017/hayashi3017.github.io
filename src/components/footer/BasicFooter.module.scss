@@ -5,4 +5,22 @@
   grid-row: 3 / 4;
   grid-column: 1 / 4;
   padding-bottom: v.$containerPadding;
+  border-top: 2px double blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    list-style-type: none;
+    font-size: 24px;
+    li:hover {
+      opacity: 0.5;
+    }
+  }
 }

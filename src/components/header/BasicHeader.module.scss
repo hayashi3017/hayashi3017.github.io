@@ -5,4 +5,16 @@
   border-bottom: 2px double blue;
   grid-row: 1 / 2;
   grid-column: 1 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.logo{
+  width: 160px;
+}
+
+.title {
+  font-size: 32px;
 }
