@@ -1,38 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## posts
 
-## Getting Started
+記事にしたいmdファイルを入れてください。
+ファイル名がパスとして使われるにあたり日本語対応していませんので、ファイル名は英語でお願いします。
+ファイル名の重複が許されないということで、idとしても機能します。
+例）
+`hayashi3017.github.io/src/pages/tech/[category]/rust/posts/memory.md`でメタ情報がbasicの場合、
+`/tech/basic/rust/memory`というパスになります。
 
-First, run the development server:
+### mdファイルのメタ情報について
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```md
+title: 記事のページ内に表示するタイトル。日本語でok
+description: 記事のページ内に表示する要約。日本語でok
+category: 大まかな分類。パスに使用するため英語にしてください
+tags:　記事に付けるタグ。配列で。
+postsDate: 投稿日
+updateDate: 更新日
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## TODO
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- ファイル名を確保する機能
+- リンクを生成する機能
+  - ページ内上部へナビゲーションを表示する
+- フッターへ大まかなページリンクを付与する
+- マークダウンファイル配置をネスト構造に対応する
+  - listFileFullPathsを使ってファイル読み込みは可能だが、next.jsへの動的ルーティングができないため断念した(各階層へ`[slug].tsx`を配置すれば可能)
