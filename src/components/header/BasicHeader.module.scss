@@ -2,7 +2,7 @@
 
 .header_container {
   height: v.$header_height;
-  border-bottom: 2px double blue;
+  border-bottom: 2px double v.$green;
   grid-row: 1 / 2;
   grid-column: 1 / 4;
   display: flex;

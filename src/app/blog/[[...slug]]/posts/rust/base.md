@@ -1,11 +1,10 @@
 ---
 title: "template"
 description: "template"
-category: "template"
+category: "test"
 tags: ["template"]
 postsDate: ""
 updateDate: ""
 ---
 
-これ、やばいな。。
-chatgptに越されている気がする。
+RUST basic
