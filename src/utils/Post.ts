@@ -23,9 +23,8 @@ async function getContent(slug: string[]) {
     }
     return empty
   }
-  const POSTS_DIR = __dirname.replace('.next/server', 'src') + '/posts'
   const postPath = slug.join('/')
-  const fullPath = path.join(POSTS_DIR, `${postPath}.md`)
+  const fullPath = path.join(process.env.POSTS_DIR as string, `${postPath}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf-8')
   const matterResult = matter(fileContents)
 
