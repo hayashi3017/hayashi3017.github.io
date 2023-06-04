@@ -1,0 +1,13 @@
+@use '@/styles/_variables' as v;
+
+.base {
+  text-decoration: underline;
+  animation: text-decoration 1s ease-in-out 1;
+
+  &:hover {
+    text-decoration: none;
+  }
+  &:visited {
+    color: v.$cream;
+  }
+}

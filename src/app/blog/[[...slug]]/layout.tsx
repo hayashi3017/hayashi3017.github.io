@@ -13,7 +13,7 @@ export async function generateStaticParams() {
       slug: postPathArray,
     }
   })
-  console.log('paths', paths)
+  // console.log('paths', paths)
 
   return paths
 }

@@ -1,0 +1,5 @@
+@use '@/styles/variables' as v;
+
+.base {
+  padding: v.$container_padding;
+}

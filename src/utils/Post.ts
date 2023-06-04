@@ -3,22 +3,24 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import { post, postData } from '@/components/post/PostView'
 
 /**
  * postsディレクトリ配下のmdを再帰的に取得する
  * @param slug 動的なURLパス
  * @returns
  */
-async function getContent(slug: string[]) {
+async function getContent(slug: string[]): Promise<post> {
   if (!slug) {
     const empty = {
       content: '',
       data: {
-        category: '',
         title: '',
+        description: '',
+        category: '',
+        tags: [],
         postsDate: '',
         updateDate: '',
-        description: '',
       },
     }
     return empty
@@ -31,7 +33,8 @@ async function getContent(slug: string[]) {
   const processedContent = await remark().use(html).process(matterResult.content)
   const content = processedContent.toString()
 
-  return { content, data: matterResult.data }
+  // asによる型キャストなしにできる？
+  return { content, data: matterResult.data as postData }
 }
 
 /**

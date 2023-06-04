@@ -1,0 +1,14 @@
+@use '@/styles/_variables' as v;
+
+.base {
+  animation: background-color 1s ease-in-out 1;
+  padding: 0.25rem 0.75rem;
+  background-color: v.$cream;
+  color: v.$black;
+  font-weight: 500;
+  border-radius: 0.5rem;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

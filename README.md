@@ -21,18 +21,16 @@ updateDate: 更新日
 
 ## TODO
 
-
-- [ ] ファイル名を確保する機能
-  - フロントサイドで利用できないfsに依存するので動的に取得する実装は難しそう
-- [ ] リンクを生成する機能
-  - [ ] ページ内上部へパンくずリストを表示する
-  - [ ] フッターへ大まかなページリンクを付与する
-    - [ ] 記事カードリストを表示する画面を作成する
+- [ ] シンタックスハイライト
+  - remark-highlightはdeplicatedとのことなので、rehype-highlightにせざるを得ない？
+  - https://tamalog.szmd.jp/rehype-highlight/ とかかな・・
+- [ ] mermaid対応
+  - https://github.com/temando/remark-mermaid は古そう
+  - https://zenn.dev/south02/articles/f858aedb489e0a 
+- [ ] サイドバーへ見出し機能
 - [ ] タグ機能
   - [ ] 検索機能・画面
-- [ ] マークダウンファイル配置をネスト構造に対応する
-  - [ ] listFileFullPathsを使ってファイル読み込みは可能だが、next.jsへの動的ルーティングができないため断念した(各階層へ`[slug].tsx`を配置すれば可能)
 - [ ] ページネーション機能
-- [ ] サイドバーへ見出し機能
+- [ ] 関連記事を表示する機能
 - [ ] クリスタで幾何学模様svgを作る
   - [ ] https://launchbadge.com/　みたいにしたい

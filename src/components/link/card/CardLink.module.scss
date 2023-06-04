@@ -1,0 +1,27 @@
+@use '@/styles/_variables' as v;
+
+.card {
+  width: 100%;
+  height: 160px;
+  border: 0.5px solid v.$green;
+  border-radius: 5px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  &:hover {
+    opacity: 50%;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-size: v.$font_size_large;
+  margin-left: v.$container_padding;
+}
+
+.description {
+  font-style: italic;
+  text-align: left;
+  margin-left: v.$container_padding;
+}

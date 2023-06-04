@@ -10,10 +10,7 @@ export const BasicFooter = () => {
           <Link href={RootRoute.root.path}>Home</Link>
         </li>
         <li>
-          <Link href={RootRoute.tech.template.rust.path}>Tech</Link>
-        </li>
-        <li>
-          <Link href={RootRoute.blog.template.path}>Blog</Link>
+          <Link href={RootRoute.blog.root.path}>Blog</Link>
         </li>
       </ul>
     </div>
