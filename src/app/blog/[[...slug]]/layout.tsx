@@ -2,8 +2,12 @@ import { ReactNode } from 'react'
 import { File } from '@/utils/File'
 import { Post } from '@/utils/Post'
 
+// TODO: .next/serverというディレクトリ構成に依存しているので注意.
+const POSTS_DIR = __dirname.split('/.next/server')[0] + process.env.POSTS_DIR
+// console.log("POSTS_DIR", POSTS_DIR)
+
 export async function generateStaticParams() {
-  const fileFullPaths = File.listFileFullPaths(process.env.POSTS_DIR as string)
+  const fileFullPaths = File.listFileFullPaths(POSTS_DIR as string)
 
   const paths = fileFullPaths.map((fileFullPath) => {
     // posts配下のファイルパス

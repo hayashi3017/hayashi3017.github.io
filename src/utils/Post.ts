@@ -11,6 +11,9 @@ import { post, postData } from '@/components/post/PostView'
  * @returns
  */
 async function getContent(slug: string[]): Promise<post> {
+  // TODO: .next/serverというディレクトリ構成に依存しているので注意.
+  const POSTS_DIR = __dirname.split('/.next/server')[0] + process.env.POSTS_DIR
+  console.log('POSTS_DIR', POSTS_DIR)
   if (!slug) {
     const empty = {
       content: '',
@@ -26,7 +29,7 @@ async function getContent(slug: string[]): Promise<post> {
     return empty
   }
   const postPath = slug.join('/')
-  const fullPath = path.join(process.env.POSTS_DIR as string, `${postPath}.md`)
+  const fullPath = path.join(POSTS_DIR as string, `${postPath}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf-8')
   const matterResult = matter(fileContents)
 
