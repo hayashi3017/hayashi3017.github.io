@@ -1,15 +1,25 @@
+// 基本単位
+$unit1: 8px;
+$unit2: calc($unit1 * 2);
+$unit3: calc($unit1 * 3);
+$unit4: calc($unit1 * 4);
+$unit5: calc($unit1 * 5);
+$unit6: calc($unit1 * 6);
+$unit7: calc($unit1 * 7);
+$unit8: calc($unit1 * 8);
+
 // 基本の文字サイズ
-$font_size: 16px;
-$font_size_large: 24px;
+$font_size: $unit2;
+$font_size_large: $unit3;
 
 // 基本の空間隔
-$container_padding: 24px;
+$container_padding: $unit3;
 
 // ヘッダの大きさ
-$header_height: 200px;
+$header_height: $unit8;
 
 // フッタの大きさ
-$footer_height: 100px;
+$footer_height: $unit8;
 
 // コンテント両端の空間隔
 $content_width_margin: 5vw;

@@ -3,6 +3,9 @@
 .main {
   background-color: v.$dark_green;
   padding: 8px;
-  border: 1px v.$cyan;
+  border: 1px solid v.$green;
   border-radius: 8px;
+  position: sticky;
+  top: calc(v.$header_height + v.$unit6);
+  margin-left: v.$unit1;
 }

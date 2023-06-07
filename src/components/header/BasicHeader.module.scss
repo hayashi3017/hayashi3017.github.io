@@ -9,9 +9,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+  background-color: v.$dark_green;
 }
 
-.logo{
+.logo {
   width: 160px;
 }
 
