@@ -12,7 +12,10 @@ $header_height: 200px;
 $footer_height: 100px;
 
 // コンテント両端の空間隔
-$content_width_margin: 80px;
+$content_width_margin: 5vw;
+
+// 記事画面のサブエリア
+$sub_width_margin: 20vw;
 
 // colors
 $indigo: #064663;

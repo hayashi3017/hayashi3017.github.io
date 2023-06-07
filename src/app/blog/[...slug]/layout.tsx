@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import PostOuterLayout from '@/layouts/post/PostOuterLayout'
 import { File } from '@/utils/File'
 import { Post } from '@/utils/Post'
 // https://github.com/highlightjs/highlight.js#es6-modules--import
@@ -25,5 +26,9 @@ export async function generateStaticParams() {
 }
 
 export default function Layout(props: { children: ReactNode }) {
-  return <>{props.children}</>
+  return (
+    <>
+      <PostOuterLayout>{props.children}</PostOuterLayout>
+    </>
+  )
 }

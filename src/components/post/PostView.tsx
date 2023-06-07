@@ -1,28 +1,28 @@
+import BreadcrumbsNav from '../navigator/Breadcrumbs'
+import PostContent, { postContent } from './PostContent'
+import PostTOC from './PostTOC'
 import styles from './PostView.module.scss'
 
 export interface post {
-  data: postData
-  content: string
+  main: postContent
+  sub: postToc
+  slug: string[]
 }
 
-export interface postData {
-  title: string
-  description: string
-  category: string
-  tags: string[]
-  postsDate: string
-  updateDate: string
+export interface postToc {
+  toc: string
 }
 
 export default function PostView(props: post) {
   return (
-    <div>
-      <h1>{props.data.category}</h1>
-      <h2>{props.data.title}</h2>
-      <p>{props.data.postsDate}</p>
-      <p>{props.data.updateDate}</p>
-      <p>{props.data.description}</p>
-      <div dangerouslySetInnerHTML={{ __html: props.content }} />
-    </div>
+    <>
+      <div className={styles.main}>
+        <BreadcrumbsNav fragPath={props.slug} />
+        <PostContent data={props.main.data} content={props.main.content} />
+      </div>
+      <div className={styles.sub}>
+        <PostTOC toc={props.sub.toc} />
+      </div>
+    </>
   )
 }

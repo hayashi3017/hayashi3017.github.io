@@ -1,0 +1,8 @@
+@use '@/styles/variables' as v;
+
+.main {
+  background-color: v.$dark_green;
+  padding: 8px;
+  border: 1px v.$cyan;
+  border-radius: 8px;
+}
