@@ -9,3 +9,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+pre > code {
+  font-family: 'Ricty Diminished', 'Ricty', 'Myrica M', 'Migu 1M', 'Source Han Code JP',
+    'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace;
+}
