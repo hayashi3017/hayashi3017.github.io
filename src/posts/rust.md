@@ -10,3 +10,4 @@ updateDate: ""
 RUST
 
 - [basic](/blog/rust/base)
+- [deref](/blog/rust/deref)
