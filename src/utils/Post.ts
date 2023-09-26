@@ -5,9 +5,8 @@ import rehypeHighlight from 'rehype-highlight'
 import rehypeSlug from 'rehype-slug'
 import rehypeStringify from 'rehype-stringify'
 import { remark } from 'remark'
-import html from 'remark-html'
 import remarkRehype from 'remark-rehype'
-import { post, postData } from '@/components/post/PostView'
+import { postData } from '@/components/post/PostContent'
 
 function returnEmpty() {
   const empty = {
@@ -22,25 +21,6 @@ function returnEmpty() {
     },
   }
   return empty
-}
-
-/**
- * mdファイルをHTML構文文字列に変換し、メタ情報と内容を返す
- * @param file mdファイルの絶対パス
- * @returns content html文字列
- * @returns data dark-matterによるメタ情報
- */
-async function getContent(file: string): Promise<post> {
-  if (!file) {
-    returnEmpty()
-  }
-  const matterResult = matter(file)
-
-  const processedContent = await remark().use(html).process(matterResult.content)
-  const content = processedContent.toString()
-
-  // asによる型キャストなしにできる？
-  return { content, data: matterResult.data as postData }
 }
 
 /**
@@ -85,6 +65,11 @@ async function getContentWithTOC(file: string) {
   return { content: content.main, data: matterResult.data as postData, toc: content.toc }
 }
 
+/**
+ * TOCと本文とを分離する
+ * @param content 
+ * @returns 
+ */
 function splitTOC(content: string) {
   // rehype-tocのデフォルトクラス名に依存しているので注意
   const delimiter = '<nav class="toc">'
@@ -93,7 +78,6 @@ function splitTOC(content: string) {
 }
 
 export const Post = {
-  getContent,
   getPath,
   getContentWithTOC,
   splitTOC,

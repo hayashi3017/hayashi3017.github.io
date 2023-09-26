@@ -4,7 +4,6 @@ import { Post } from '@/utils/Post'
 
 export default async function Page(props: { params: { slug: string[] } }) {
   const file = await File.readContent(props.params.slug)
-  // const { content, data } = await Post.getContent(file)
   const { content, data, toc } = await Post.getContentWithTOC(file)
   return (
     <>
