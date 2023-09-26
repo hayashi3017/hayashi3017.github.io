@@ -26,7 +26,9 @@ updateDate: 更新日
   - https://tamalog.szmd.jp/rehype-highlight/ とかかな・・
 - [ ] mermaid対応
   - https://github.com/temando/remark-mermaid は古そう
-  - https://zenn.dev/south02/articles/f858aedb489e0a 
+  - https://zenn.dev/south02/articles/f858aedb489e0a
+- [ ] mdファイル内のメタ情報に型推論が効くようにする
+  - tsファイル中に宣言して書き換えるか
 - [ ] サイドバーへ見出し機能
 - [ ] タグ機能
   - [ ] 検索機能・画面
