@@ -1,9 +1,8 @@
+export type Category = ''
 
-export type Category = ""
+export type Language = 'rust'
 
-export type Language = "rust"
-
-export type Library = ""
+export type Library = ''
 
 export type Technology = Language | Library
 
