@@ -21,6 +21,11 @@ updateDate: 更新日
 
 ## TODO
 
+- [ ] フッターの修正
+- [ ] 目次クリック時にヘッダーに隠れてしまう問題修正
+- [ ] メタ情報の表示スタイル調整
+- [ ] 本文中コード表記のフォント調整
+- [ ] 本文中リンクのスタイル調整
 - [ ] シンタックスハイライト
   - remark-highlightはdeplicatedとのことなので、rehype-highlightにせざるを得ない？
   - https://tamalog.szmd.jp/rehype-highlight/ とかかな・・
