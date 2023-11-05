@@ -9,14 +9,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  position: sticky;
-  top: 0px;
+  // 以下理由で常時表示しない
+  // - TOCリンクをクリックした際に見出しが隠れてしまうため
+  // - 画面にヘッダーを表示する意義が小さいため
+  // position: sticky;
+  // top: 0px;
   overflow: hidden;
   background-color: v.$dark_green;
-}
-
-.logo {
-  width: 160px;
 }
 
 .title {

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { ReactNode } from 'react'
 import { BasicContent } from '@/components/content/BasicContent'
-import { BasicLayout } from '@/layouts/basic/BasicLayout'
+import { Split2Layout } from '@/layouts/basic/Split2Layout'
 import '@/styles/globals.scss'
 
 export const metadata: Metadata = {
@@ -14,9 +14,9 @@ export default function Layout(props: { children: ReactNode }) {
     <>
       <html lang='en'>
         <body>
-          <BasicLayout header={{ title: 'ようこそ' }}>
+          <Split2Layout header={{ title: '雑多思考log' }}>
             <BasicContent>{props.children}</BasicContent>
-          </BasicLayout>
+          </Split2Layout>
         </body>
       </html>
     </>
