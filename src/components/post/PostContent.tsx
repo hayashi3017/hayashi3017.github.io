@@ -17,11 +17,11 @@ export interface postData {
 export default function PostContent(props: postContent) {
   return (
     <div className={styles.main}>
-      <h1>{props.data.category}</h1>
-      <h2>{props.data.title}</h2>
-      <p>{props.data.postsDate}</p>
-      <p>{props.data.updateDate}</p>
-      <p>{props.data.description}</p>
+      <h1>{props.data.title}</h1>
+      <p>
+        posted:{props.data.postsDate}, updated: {props.data.updateDate}
+      </p>
+      <p>category: {props.data.category}</p>
       <div dangerouslySetInnerHTML={{ __html: props.content }} />
     </div>
   )

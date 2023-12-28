@@ -8,9 +8,12 @@ export default function BreadcrumbsNav(props: { fragPath: string[] }) {
 
   return (
     <ul className={styles.parent}>
+      <li className={styles.child}>
+        <ButtonLink pathName='blog' url='/blog' />
+      </li>
       {props.fragPath.map((path, index) => (
         <li key={index} className={styles.child}>
-          <span> {'>'} </span>
+          <span> {' ＞ '} </span>
           <ButtonLink pathName={path} url={resolver[index]} />
         </li>
       ))}
