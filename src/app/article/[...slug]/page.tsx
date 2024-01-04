@@ -7,7 +7,7 @@ export default async function Page(props: { params: { slug: string[] } }) {
   const { content, data, toc } = await Post.getContentWithTOC(file)
   return (
     <>
-      <PostView sub={{ toc }} main={{ data, content }} slug={props.params.slug} />
+      <PostView sub={{ toc }} main={{ data, content }} />
     </>
   )
 }

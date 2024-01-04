@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './CardLink.module.scss'
 
 interface LinkProps {
@@ -9,10 +10,10 @@ interface LinkProps {
 export default function CardLink(props: LinkProps) {
   return (
     <>
-      <a href={props.url} className={styles.card}>
+      <Link href={props.url} className={styles.card}>
         <span className={styles.title}>{props.title}</span>
         <div className={styles.description}>{props.children}</div>
-      </a>
+      </Link>
     </>
   )
 }

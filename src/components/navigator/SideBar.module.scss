@@ -1,0 +1,21 @@
+@use '@/styles/_variables' as v;
+
+.child {
+  list-style: none;
+  display: block;
+  span {
+    white-space: pre-wrap;
+  }
+}
+
+.target {
+  filter: brightness(1.5);
+}
+
+.parent {
+  padding-left: 0px;
+  display: inline-block;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  border-right: 2px double v.$green;
+}

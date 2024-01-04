@@ -1,8 +1,8 @@
 /**
  * URLフラグメントの配列に対応するURLパスの配列を取得
- * @param urlFragment urlパスを/で区切った配列 /blog/rust/base ⇒ ['rust', 'base']
- * @param basePath 根底となるurlパス
- * @returns ['/blog/rust', '/blog/rust/base']
+ * @param urlFragment urlパスを/で区切った配列 例）/article/rust/base ⇒ ['rust', 'base']
+ * @param basePath 根底となるurlパス 例）/article
+ * @returns 例）['/article/rust', '/article/rust/base']
  */
 function getUrlPath(urlFragment: string[], basePath: string) {
   return urlFragment.map((path, index, arr) => {

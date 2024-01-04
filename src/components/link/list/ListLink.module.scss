@@ -1,0 +1,18 @@
+@use '@/styles/_variables' as v;
+
+.item {
+  height: v.$sidebar_item_height;
+  border-bottom: 0.5px solid v.$green;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    opacity: 50%;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-size: v.$font_size_large;
+  margin-left: v.$container_padding;
+}

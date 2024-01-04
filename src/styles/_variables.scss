@@ -7,6 +7,7 @@ $unit5: calc($unit1 * 5);
 $unit6: calc($unit1 * 6);
 $unit7: calc($unit1 * 7);
 $unit8: calc($unit1 * 8);
+$unit40: calc($unit4 * 10);
 
 // 基本の文字サイズ
 $font_size: $unit2;
@@ -20,6 +21,10 @@ $header_height: $unit8;
 
 // フッタの大きさ
 $footer_height: $unit8;
+
+// サイドバー
+$sidebar_width: $unit40;
+$sidebar_item_height: $unit4;
 
 // コンテント両端の空間隔
 $content_width_margin: 2vw;

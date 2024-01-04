@@ -1,6 +1,6 @@
 import { SitemapView } from '@/components/sitemap/SitemapView'
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <SitemapView />

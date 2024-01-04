@@ -1,9 +1,0 @@
-@use '@/styles/variables' as v;
-
-.layout_container {
-  display: grid;
-  grid-template-rows: v.$header_height 1fr;
-  grid-template-columns: v.$content_width_margin 1fr v.$content_width_margin;
-  height: 100vh;
-  box-sizing: border-box;
-}
