@@ -32,6 +32,16 @@ export function SitemapView() {
           </CardLink>
         </PaddingLayout>
       </PaddingLayout>
+      <PaddingLayout>
+        <CardLink title={route.blog.root.name} url={route.blog.root.path}>
+          {route.blog.root.desc}
+        </CardLink>
+      </PaddingLayout>
+      <PaddingLayout>
+        <CardLink title={route.profile.root.name} url={route.profile.root.path}>
+          {route.profile.root.desc}
+        </CardLink>
+      </PaddingLayout>
     </>
   )
 }

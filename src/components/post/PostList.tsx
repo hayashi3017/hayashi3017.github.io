@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './PostList.module.scss'
 
-interface postData {
+type PostListProps = {
   title: string
   description: string
   category: string
@@ -10,7 +10,7 @@ interface postData {
   updateDate: string
 }
 
-export default function PostList(postData: postData[]) {
+export default function PostList(postData: PostListProps[]) {
   return (
     <ul>
       {postData.map((data) => (

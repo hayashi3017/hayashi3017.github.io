@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import styles from './BasicContent.module.scss'
 
-export interface onlyChildProps {
+type onlyChildProps = {
   children: ReactNode
 }
 

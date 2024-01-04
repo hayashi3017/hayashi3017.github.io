@@ -6,7 +6,7 @@ import rehypeSlug from 'rehype-slug'
 import rehypeStringify from 'rehype-stringify'
 import { remark } from 'remark'
 import remarkRehype from 'remark-rehype'
-import { postData } from '@/components/post/PostContent'
+import { PostData } from '@/components/post/PostContent'
 
 function returnEmpty() {
   const empty = {
@@ -62,7 +62,7 @@ async function getContentWithTOC(file: string) {
   const content = splitTOC(entireContent)
 
   // asによる型キャストなしにできる？
-  return { content: content.main, data: matterResult.data as postData, toc: content.toc }
+  return { content: content.main, data: matterResult.data as PostData, toc: content.toc }
 }
 
 /**

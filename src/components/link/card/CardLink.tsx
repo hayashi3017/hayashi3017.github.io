@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './CardLink.module.scss'
 
-interface LinkProps {
+type LinkProps = {
   title: string
   url: string
   children?: string

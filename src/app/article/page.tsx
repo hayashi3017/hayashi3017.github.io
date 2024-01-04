@@ -1,9 +1,3 @@
-import { SitemapView } from '@/components/sitemap/SitemapView'
-
 export default async function Page() {
-  return (
-    <>
-      <SitemapView />
-    </>
-  )
+  return <>技術的な記事を書くためのページです。</>
 }

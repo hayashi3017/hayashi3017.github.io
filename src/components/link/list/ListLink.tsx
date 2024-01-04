@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './ListLink.module.scss'
 
-interface LinkProps {
+type LinkProps = {
   title: string
   url: string
 }

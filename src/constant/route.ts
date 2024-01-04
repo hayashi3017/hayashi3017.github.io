@@ -15,7 +15,7 @@ type RouteObj = Record<string, RouteUnit>
 const rootRoute = {
   root: {
     path: '/',
-    name: 'サイトのトップページ',
+    name: 'Top',
     desc: 'ホームページです。技術ブログや日常系やあれこれ・・アウトプットの場として活用します。',
   },
 } as const
@@ -23,7 +23,7 @@ const rootRoute = {
 const articleRoute = {
   root: {
     path: '/article',
-    name: 'ブログのトップページ',
+    name: 'Article',
     desc: '技術ブログです。エンジニアとして、技術的なことをまとめていきたいです。',
   },
   rust: {
@@ -38,14 +38,39 @@ const articleRoute = {
   },
 } as const
 
+const blogRoute = {
+  root: {
+    path: '/blog',
+    name: 'Blog',
+    desc: 'このブログでは自由に情報を発信します。',
+  },
+} as const
+
+const sitemapRoute = {
+  root: {
+    path: '/sitemap',
+    name: 'Sitemap',
+    desc: 'このサイトのマップです。',
+  },
+} as const
+
+const profileRoute = {
+  root: {
+    path: '/profile',
+    name: 'About me',
+    desc: 'サイト管理者について',
+  },
+} as const
+
 /**
  * 第一階層はサイトでの区切りとしてパスを切る、それ以降はルール無し
  */
 export const route = {
   root: rootRoute,
   article: articleRoute,
-  // blogを追加する、profile, sitemapなど
-  // hobyを追加する
+  blog: blogRoute,
+  sitemap: sitemapRoute,
+  profile: profileRoute,
 }
 
 type Route = typeof route
@@ -55,15 +80,26 @@ export type RouteKeys = keyof Route
 type RootRoute = typeof rootRoute
 type RootRouteKeys = keyof RootRoute
 type RootRouteVals = RootRoute[RootRouteKeys]
-type BlogRoute = typeof articleRoute
+type ArticleRoute = typeof articleRoute
+type ArticleRouteKeys = keyof ArticleRoute
+type ArticleRouteVals = ArticleRoute[ArticleRouteKeys]
+type BlogRoute = typeof blogRoute
 type BlogRouteKeys = keyof BlogRoute
 type BlogRouteVals = BlogRoute[BlogRouteKeys]
+type ProfileRoute = typeof profileRoute
+type ProfileRouteKeys = keyof ProfileRoute
+type ProfileRouteVals = ProfileRoute[ProfileRouteKeys]
+type SitemapRoute = typeof sitemapRoute
+type SitemapRouteKeys = keyof SitemapRoute
+type SitemapRouteVals = SitemapRoute[SitemapRouteKeys]
 
 // TODO: 不要な場合は削除する
-export type RoutePathFrags = RouteKeys | RootRouteKeys | BlogRouteKeys
+export type RoutePathFrags = RouteKeys | RootRouteKeys | ArticleRouteKeys | BlogRouteKeys
 
 type ExtractPath<T extends RouteUnit> = T['path']
-export type AllPaths = ExtractPath<RootRouteVals | BlogRouteVals>
+export type AllPaths = ExtractPath<
+  RootRouteVals | ArticleRouteVals | BlogRouteVals | ProfileRouteVals | SitemapRouteVals
+>
 export const allPaths = routeUtil.getAllPaths()
 
 export const allRoutes = routeUtil.getAllRoutes()

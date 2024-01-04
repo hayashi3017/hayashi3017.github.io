@@ -6,7 +6,7 @@ import { BasicFooter } from '@/components/footer/BasicFooter'
 import { BasicHeader } from '@/components/header/BasicHeader'
 import SideBar from '@/components/navigator/SideBar'
 
-export interface BasicLayoutProps {
+type BasicLayoutProps = {
   header: {
     title: string
   }

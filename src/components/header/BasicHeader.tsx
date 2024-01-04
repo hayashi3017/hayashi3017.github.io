@@ -1,6 +1,6 @@
 import styles from './BasicHeader.module.scss'
 
-export interface HeaderProps {
+type HeaderProps = {
   title: string
 }
 

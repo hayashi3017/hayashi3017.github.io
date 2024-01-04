@@ -1,13 +1,13 @@
 ---
-title: "rust base"
+title: "Rust"
 description: "basic syntax of rust"
 category: "programing language"
 tags: ["rust"]
-postsDate: ""
-updateDate: ""
+postsDate: "2023/6/4"
+updateDate: "2024/1/5"
 ---
 
-RUST
+Rustの技術・ノウハウをまとめています。
 
-- [basic](/blog/rust/base)
-- [deref](/blog/rust/deref)
+- [basic](/article/rust/base)
+- [Deref](/article/rust/deref)

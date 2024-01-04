@@ -6,7 +6,7 @@ export type Library = ''
 
 export type Technology = Language | Library
 
-export interface PageInfo {
+export type PageInfo = {
   fileFullPath: string
   category: string
   path: string

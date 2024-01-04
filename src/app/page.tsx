@@ -1,9 +1,29 @@
-import { SitemapView } from '@/components/sitemap/SitemapView'
-
 export default function Page() {
   return (
     <>
-      <SitemapView />
+      <h2>概要</h2>
+      <p>好きなことを自由にまとめます。</p>
+      <p>技術内容の配置先は、その完成度・公開必要性などを考慮し下記のように変更します。</p>
+      <p>スクラッチ　→　本ブログ　→　公の技術記事</p>
+
+      <h4>技術記事との差</h4>
+      <p>技術記事との差別化として、下記優位性によりアウトプットを増やすことを期待しています。</p>
+      <ul>
+        <li>体裁を最低限にできること</li>
+        <li>前提を省略できること</li>
+        <li>100%ではなく80%, 90%の正確性で問題ないこと</li>
+      </ul>
+
+      <h4>スクラッチとの差</h4>
+      <p>
+        <a
+          href='https://github.com/hayashi3017/sandbox/discussions/categories/general'
+          target='_blank'
+        >
+          スクラッチ
+        </a>
+        との差別化として、頭に整理するために記事として整理することを目的としています。
+      </p>
     </>
   )
 }

@@ -4,7 +4,6 @@ import { allRoutes } from '@/constant/route'
 
 // 現在パスをもらって、それを中心に表示するだけ
 export default function SideBar(props: { path: string }) {
-  console.log(props.path)
   return (
     <ul className={styles.parent}>
       {allRoutes.map((route) => {
@@ -15,7 +14,7 @@ export default function SideBar(props: { path: string }) {
               route.path === props.path ? `${styles.child} ${styles.target}` : `${styles.child}`
             }
           >
-            <ListLink title={route.path} url={route.path} />
+            <ListLink title={route.name} url={route.path} />
           </li>
         )
       })}
